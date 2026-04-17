@@ -13,9 +13,14 @@ export type RenderingAsset = {
 	filename: string;
 	path: string;
 	sizeBytes: number;
+	year: number;
+	resolution: {
+		width: number;
+		height: number;
+	};
 };
 
-export const renderings: RenderingAsset[] = [
+const baseRenderings = [
 	{
 		"id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0",
 		"competition": "V5RC",
@@ -524,3 +529,25 @@ export const renderings: RenderingAsset[] = [
 		"sizeBytes": 1715885
 	}
 ];
+
+const seasonYearBySeason: Record<string, number> = {
+	OverUnder: 2023,
+	FullVolume: 2023,
+	HighStakes: 2024,
+	RapidRelay: 2024,
+	PushBack: 2025,
+	MixAndMatch: 2025,
+	FieldPerimeter: 0
+};
+
+const getResolution = (asset: (typeof baseRenderings)[number]) => {
+	const width = asset.version.includes('+2000px') ? 2000 : 4000;
+	const height = asset.competition === 'VIQRC' ? (width === 2000 ? 1517 : 3033) : width;
+	return { width, height };
+};
+
+export const renderings: RenderingAsset[] = baseRenderings.map((asset) => ({
+	...asset,
+	year: seasonYearBySeason[asset.season] ?? -1,
+	resolution: getResolution(asset)
+}));
