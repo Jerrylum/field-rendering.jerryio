@@ -22,24 +22,6 @@ export type RenderingAsset = {
 
 export const renderings: RenderingAsset[] = [
   {
-    "id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px",
-    "competition": "V5RC",
-    "season": "FieldPerimeter",
-    "setup": "12ft12ft",
-    "view": "TopDown",
-    "theme": "TileColor240_255",
-    "version": "1.0+2000px",
-    "extension": "png",
-    "filename": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px.png",
-    "path": "/renders/V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px.png",
-    "sizeBytes": 1268162,
-    "year": 0,
-    "resolution": {
-      "width": 2000,
-      "height": 2000
-    }
-  },
-  {
     "id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0",
     "competition": "V5RC",
     "season": "FieldPerimeter",
@@ -58,17 +40,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px",
+    "id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px",
     "competition": "V5RC",
     "season": "FieldPerimeter",
     "setup": "12ft12ft",
     "view": "TopDown",
-    "theme": "TileColor66_71",
+    "theme": "TileColor240_255",
     "version": "1.0+2000px",
     "extension": "png",
-    "filename": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px.png",
-    "path": "/renders/V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px.png",
-    "sizeBytes": 990300,
+    "filename": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px.png",
+    "path": "/renders/V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor240_255@1.0+2000px.png",
+    "sizeBytes": 1268162,
     "year": 0,
     "resolution": {
       "width": 2000,
@@ -94,18 +76,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px",
+    "id": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px",
     "competition": "V5RC",
-    "season": "HighStakes",
-    "setup": "H2H",
+    "season": "FieldPerimeter",
+    "setup": "12ft12ft",
     "view": "TopDown",
     "theme": "TileColor66_71",
-    "version": "4.0+2000px",
+    "version": "1.0+2000px",
     "extension": "png",
-    "filename": "V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 2032994,
-    "year": 2024,
+    "filename": "V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px.png",
+    "path": "/renders/V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0+2000px.png",
+    "sizeBytes": 990300,
+    "year": 0,
     "resolution": {
       "width": 2000,
       "height": 2000
@@ -130,17 +112,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px",
+    "id": "V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
     "season": "HighStakes",
     "setup": "H2H",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1760973,
+    "filename": "V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 2032994,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -166,17 +148,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px",
+    "id": "V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
     "season": "HighStakes",
-    "setup": "Skills",
-    "view": "TopDown",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 2148259,
+    "filename": "V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1760973,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -202,17 +184,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px",
+    "id": "V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
     "season": "HighStakes",
     "setup": "Skills",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1867798,
+    "filename": "V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 2148259,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -238,18 +220,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px",
+    "id": "V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
-    "season": "OverUnder",
-    "setup": "H2H",
-    "view": "TopDown",
+    "season": "HighStakes",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1316475,
-    "year": 2023,
+    "filename": "V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1867798,
+    "year": 2024,
     "resolution": {
       "width": 2000,
       "height": 2000
@@ -274,17 +256,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px",
+    "id": "V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
     "season": "OverUnder",
-    "setup": "Skills",
+    "setup": "H2H",
     "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1335614,
+    "filename": "V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1316475,
     "year": 2023,
     "resolution": {
       "width": 2000,
@@ -310,18 +292,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px",
+    "id": "V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px",
     "competition": "V5RC",
-    "season": "PushBack",
-    "setup": "H2H",
+    "season": "OverUnder",
+    "setup": "Skills",
     "view": "TopDown",
     "theme": "TileColor66_71",
-    "version": "0.1+2000px",
+    "version": "4.0+2000px",
     "extension": "png",
-    "filename": "V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1891253,
-    "year": 2025,
+    "filename": "V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1335614,
+    "year": 2023,
     "resolution": {
       "width": 2000,
       "height": 2000
@@ -346,17 +328,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "id": "V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px",
     "competition": "V5RC",
     "season": "PushBack",
     "setup": "H2H",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "0.1+2000px",
     "extension": "png",
-    "filename": "V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1688459,
+    "filename": "V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1891253,
     "year": 2025,
     "resolution": {
       "width": 2000,
@@ -382,17 +364,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px",
+    "id": "V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
     "competition": "V5RC",
     "season": "PushBack",
-    "setup": "Skills",
-    "view": "TopDown",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
     "theme": "TileColor66_71",
     "version": "0.1+2000px",
     "extension": "png",
-    "filename": "V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1895959,
+    "filename": "V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1688459,
     "year": 2025,
     "resolution": {
       "width": 2000,
@@ -418,17 +400,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "id": "V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px",
     "competition": "V5RC",
     "season": "PushBack",
     "setup": "Skills",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "0.1+2000px",
     "extension": "png",
-    "filename": "V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1689250,
+    "filename": "V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-PushBack-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1895959,
     "year": 2025,
     "resolution": {
       "width": 2000,
@@ -454,21 +436,21 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px",
-    "competition": "VIQRC",
-    "season": "FieldPerimeter",
-    "setup": "8ft6ft",
-    "view": "TopDown",
-    "theme": "Original",
-    "version": "1.0+2000px",
+    "id": "V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "V5RC",
+    "season": "PushBack",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
     "extension": "png",
-    "filename": "VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px.png",
-    "path": "/renders/VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px.png",
-    "sizeBytes": 2154802,
-    "year": 0,
+    "filename": "V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1689250,
+    "year": 2025,
     "resolution": {
       "width": 2000,
-      "height": 1517
+      "height": 2000
     }
   },
   {
@@ -490,18 +472,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VIQRC-FullVolume-All-TopDown-Original@4.0+2000px",
+    "id": "VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px",
     "competition": "VIQRC",
-    "season": "FullVolume",
-    "setup": "All",
+    "season": "FieldPerimeter",
+    "setup": "8ft6ft",
     "view": "TopDown",
     "theme": "Original",
-    "version": "4.0+2000px",
+    "version": "1.0+2000px",
     "extension": "png",
-    "filename": "VIQRC-FullVolume-All-TopDown-Original@4.0+2000px.png",
-    "path": "/renders/VIQRC-FullVolume-All-TopDown-Original@4.0+2000px.png",
-    "sizeBytes": 2675377,
-    "year": 2023,
+    "filename": "VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px.png",
+    "path": "/renders/VIQRC-FieldPerimeter-8ft6ft-TopDown-Original@1.0+2000px.png",
+    "sizeBytes": 2154802,
+    "year": 0,
     "resolution": {
       "width": 2000,
       "height": 1517
@@ -526,18 +508,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px",
+    "id": "VIQRC-FullVolume-All-TopDown-Original@4.0+2000px",
     "competition": "VIQRC",
-    "season": "MixAndMatch",
-    "setup": "H2H",
+    "season": "FullVolume",
+    "setup": "All",
     "view": "TopDown",
     "theme": "Original",
-    "version": "0.1+2000px",
+    "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px.png",
-    "path": "/renders/VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px.png",
-    "sizeBytes": 2594633,
-    "year": 2025,
+    "filename": "VIQRC-FullVolume-All-TopDown-Original@4.0+2000px.png",
+    "path": "/renders/VIQRC-FullVolume-All-TopDown-Original@4.0+2000px.png",
+    "sizeBytes": 2675377,
+    "year": 2023,
     "resolution": {
       "width": 2000,
       "height": 1517
@@ -562,17 +544,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px",
+    "id": "VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px",
     "competition": "VIQRC",
     "season": "MixAndMatch",
-    "setup": "Skills",
+    "setup": "H2H",
     "view": "TopDown",
     "theme": "Original",
     "version": "0.1+2000px",
     "extension": "png",
-    "filename": "VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px.png",
-    "path": "/renders/VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px.png",
-    "sizeBytes": 2621607,
+    "filename": "VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px.png",
+    "path": "/renders/VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px.png",
+    "sizeBytes": 2594633,
     "year": 2025,
     "resolution": {
       "width": 2000,
@@ -598,18 +580,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px",
+    "id": "VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px",
     "competition": "VIQRC",
-    "season": "RapidRelay",
-    "setup": "All",
+    "season": "MixAndMatch",
+    "setup": "Skills",
     "view": "TopDown",
     "theme": "Original",
-    "version": "4.0+2000px",
+    "version": "0.1+2000px",
     "extension": "png",
-    "filename": "VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px.png",
-    "path": "/renders/VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px.png",
-    "sizeBytes": 2394641,
-    "year": 2024,
+    "filename": "VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px.png",
+    "path": "/renders/VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px.png",
+    "sizeBytes": 2621607,
+    "year": 2025,
     "resolution": {
       "width": 2000,
       "height": 1517
@@ -634,21 +616,21 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px",
-    "competition": "VURC",
-    "season": "HighStakes",
-    "setup": "H2H",
+    "id": "VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px",
+    "competition": "VIQRC",
+    "season": "RapidRelay",
+    "setup": "All",
     "view": "TopDown",
-    "theme": "TileColor66_71",
+    "theme": "Original",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 2040617,
+    "filename": "VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px.png",
+    "path": "/renders/VIQRC-RapidRelay-All-TopDown-Original@4.0+2000px.png",
+    "sizeBytes": 2394641,
     "year": 2024,
     "resolution": {
       "width": 2000,
-      "height": 2000
+      "height": 1517
     }
   },
   {
@@ -670,17 +652,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px",
+    "id": "VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px",
     "competition": "VURC",
     "season": "HighStakes",
     "setup": "H2H",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1487235,
+    "filename": "VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/VURC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 2040617,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -706,17 +688,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px",
+    "id": "VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px",
     "competition": "VURC",
     "season": "HighStakes",
-    "setup": "Skills",
-    "view": "TopDown",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 2101855,
+    "filename": "VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1487235,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -742,17 +724,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px",
+    "id": "VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px",
     "competition": "VURC",
     "season": "HighStakes",
     "setup": "Skills",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 1546875,
+    "filename": "VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/VURC-HighStakes-Skills-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 2101855,
     "year": 2024,
     "resolution": {
       "width": 2000,
@@ -778,18 +760,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px",
+    "id": "VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px",
     "competition": "VURC",
-    "season": "OverUnder",
-    "setup": "H2H",
-    "view": "TopDown",
+    "season": "HighStakes",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
     "theme": "TileColor66_71",
     "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "path": "/renders/VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "sizeBytes": 2073446,
-    "year": 2023,
+    "filename": "VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1546875,
+    "year": 2024,
     "resolution": {
       "width": 2000,
       "height": 2000
@@ -814,18 +796,18 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px",
+    "id": "VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px",
     "competition": "VURC",
-    "season": "PushBack",
+    "season": "OverUnder",
     "setup": "H2H",
     "view": "TopDown",
     "theme": "TileColor66_71",
-    "version": "0.1+2000px",
+    "version": "4.0+2000px",
     "extension": "png",
-    "filename": "VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1919920,
-    "year": 2025,
+    "filename": "VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "path": "/renders/VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
+    "sizeBytes": 1378575,
+    "year": 2023,
     "resolution": {
       "width": 2000,
       "height": 2000
@@ -850,17 +832,17 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
-    "id": "VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "id": "VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px",
     "competition": "VURC",
     "season": "PushBack",
     "setup": "H2H",
-    "view": "TopDownHighlighted",
+    "view": "TopDown",
     "theme": "TileColor66_71",
     "version": "0.1+2000px",
     "extension": "png",
-    "filename": "VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "path": "/renders/VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "sizeBytes": 1715885,
+    "filename": "VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-PushBack-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1919920,
     "year": 2025,
     "resolution": {
       "width": 2000,
@@ -883,6 +865,24 @@ export const renderings: RenderingAsset[] = [
     "resolution": {
       "width": 4000,
       "height": 4000
+    }
+  },
+  {
+    "id": "VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "VURC",
+    "season": "PushBack",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1715885,
+    "year": 2025,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
     }
   }
 ];
