@@ -279,18 +279,22 @@
 	});
 </script>
 
-<main class="min-h-screen bg-[#1e1e1e] text-zinc-100">
-	<div class="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+<main class="relative min-h-screen text-[#e4e9f2]">
+	<div
+		aria-hidden="true"
+		class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,#414b5d_0%,#323c4a_50%,#28323f_100%)]"
+	></div>
+	<div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
 		<header class="space-y-2">
-			<p class="text-sm tracking-[0.18em] text-[#a77ad3] uppercase">field-rendering.jerryio</p>
-			<h1 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+			<p class="text-sm tracking-[0.18em] text-[#aebbd3] uppercase">field-rendering.jerryio</p>
+			<h1 class="text-3xl font-semibold tracking-tight text-[#f3f6fb] sm:text-4xl">
 				Field Rendering Gallery
 			</h1>
-			<p class="max-w-3xl text-sm text-zinc-300 sm:text-base">
+			<p class="max-w-3xl text-sm text-[#c4cedf] sm:text-base">
 				These standardized field renders are made for precise route planning in tools like
 				PATH.JERRYIO and other path editors, so waypoint placement maps to expected robot locations.
 			</p>
-			<p class="max-w-3xl text-sm text-zinc-400 sm:text-base">
+			<p class="max-w-3xl text-sm text-[#9faec3] sm:text-base">
 				Developers and teams can download them for custom editors and engineering notebooks,
 				avoiding manual game-manual screenshots. Renders use fixed top-down camera extents for
 				consistency: 3690 mm for V5 and 1920 mm for IQ.
@@ -301,11 +305,11 @@
 
 		<section class="grid grid-cols-1 gap-5 lg:grid-cols-[18rem_1fr]">
 			<aside
-				class="rounded-2xl border border-[#353535] bg-[#292929] px-3 py-5 shadow-2xl shadow-black/40"
+				class="rounded-2xl border border-[#4a556a] bg-[#323c4a] px-3 py-5 shadow-2xl shadow-[#1f2630]/55"
 			>
 				{#each programGroups as program (program)}
 					<div class="mb-4 last:mb-0">
-						<p class="mb-3 px-2 text-xs font-semibold tracking-[0.14em] text-[#cfb2ea] uppercase">
+						<p class="mb-3 px-2 text-xs font-semibold tracking-[0.14em] text-[#b9c7de] uppercase">
 							{program}
 						</p>
 						<div class="space-y-1">
@@ -317,10 +321,10 @@
 										selectedSeasonTreeKey = treeKey;
 									}}
 									class={[
-										'flex w-full cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition',
+										'flex w-full cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition-colors',
 										treeKey === activeSeasonTreeKey
-											? 'bg-[#3b2b4e] text-white ring-1 ring-[#7f47b3]'
-											: 'text-zinc-300 hover:bg-[#353535]'
+											? 'bg-[#414b5d] text-[#f5f8ff] ring-1 ring-[#6a7792]'
+											: 'text-[#d1d9e8] hover:bg-[#3a4555]'
 									]}
 								>
 									<img
@@ -338,23 +342,23 @@
 
 			<div class="space-y-4">
 				<div
-					class="flex items-center justify-between rounded-2xl border border-[#353535] bg-[#292929] px-4 py-3"
+					class="flex items-center justify-between rounded-2xl border border-[#4a556a] bg-[#323c4a] px-4 py-3"
 				>
-					<p class="text-sm text-zinc-300">
-						<span class="font-semibold text-[#cfb2ea]">{activeSelection.program}</span>
+					<p class="text-sm text-[#c9d3e6]">
+						<span class="font-semibold text-[#dde8fb]">{activeSelection.program}</span>
 						{#if activeSelection.season}
 							<span> · {getSeasonLabel(activeSelection.season)}</span>
 						{/if}
 					</p>
-					<p class="text-sm text-zinc-300">
-						<span class="font-semibold text-[#cfb2ea]">{filteredGroups.length}</span>
+					<p class="text-sm text-[#c9d3e6]">
+						<span class="font-semibold text-[#dde8fb]">{filteredGroups.length}</span>
 						{filteredGroups.length === 1 ? ' result' : ' results'}
 					</p>
 				</div>
 
 				{#if filteredGroups.length === 0}
-					<section class="rounded-2xl border border-[#353535] bg-[#292929] p-10 text-center">
-						<p class="text-lg font-medium text-zinc-100">
+					<section class="rounded-2xl border border-[#4a556a] bg-[#323c4a] p-10 text-center">
+						<p class="text-lg font-medium text-[#f0f4fb]">
 							No renderings available for this season yet.
 						</p>
 					</section>
@@ -364,9 +368,9 @@
 							{@const selectedAsset = selectedAssetForGroup(group)}
 							{@const previewPath = getPreviewPathForGroup(group) || selectedAsset.path}
 							<article
-								class="overflow-hidden rounded-2xl border border-[#353535] bg-[#292929] shadow-xl shadow-black/40"
+								class="overflow-hidden rounded-2xl border border-[#4a556a] bg-[#323c4a] shadow-xl shadow-[#1f2630]/45"
 							>
-								<div class="aspect-square border-b border-[#3f2f54] bg-[#1e1e1e]">
+								<div class="aspect-square border-b border-[#4a556a] bg-[#2a3441]">
 									<img
 										src={asset(previewPath)}
 										alt={selectedAsset.filename}
@@ -377,16 +381,16 @@
 
 								<div class="space-y-4 p-4">
 									<div class="space-y-2">
-										<p class="text-sm font-semibold text-white">
+										<p class="text-sm font-semibold text-[#f1f5ff]">
 											{getCompetitionLabel(group.competition)} · {getSetupLabel(group.setup)}
 										</p>
-										<dl class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-zinc-300">
+										<dl class="grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-[#cad4e6]">
 											<div>
-												<dt class="text-zinc-500">View</dt>
+												<dt class="text-[#8f9fb8]">View</dt>
 												<dd>{getViewLabel(group.view)}</dd>
 											</div>
 											<div>
-												<dt class="text-zinc-500">Theme</dt>
+												<dt class="text-[#8f9fb8]">Theme</dt>
 												<dd>{group.theme}</dd>
 											</div>
 										</dl>
@@ -395,7 +399,7 @@
 									<div class="flex items-end gap-2">
 										<label class="flex-1">
 											<span
-												class="mb-1 block text-xs font-medium tracking-wide text-zinc-400 uppercase"
+												class="mb-1 block text-xs font-medium tracking-wide text-[#9daecc] uppercase"
 												>Version</span
 											>
 											<select
@@ -405,7 +409,7 @@
 														event.currentTarget as HTMLSelectElement
 													).value;
 												}}
-												class="h-10 w-full rounded-lg border border-[#353535] bg-[#1e1e1e] px-3 text-sm text-zinc-100 ring-[#7f47b3] transition outline-none focus:border-[#7f47b3] focus:ring-2"
+												class="h-10 w-full rounded-lg border border-[#55637b] bg-[#2c3644] px-3 text-sm text-[#ecf1fb] ring-[#6d7d99] transition-colors outline-none focus:border-[#7f90b0] focus:ring-2"
 											>
 												{#each getVersionFamilies(group) as versionFamily (versionFamily)}
 													<option value={versionFamily}>{versionFamily}</option>
@@ -415,7 +419,7 @@
 
 										<label class="w-26">
 											<span
-												class="mb-1 block text-xs font-medium tracking-wide text-zinc-400 uppercase"
+												class="mb-1 block text-xs font-medium tracking-wide text-[#9daecc] uppercase"
 												>Resolution</span
 											>
 											<select
@@ -425,7 +429,7 @@
 														event.currentTarget as HTMLSelectElement
 													).value as ResolutionMode;
 												}}
-												class="h-10 w-full rounded-lg border border-[#353535] bg-[#1e1e1e] px-3 text-sm text-zinc-100 ring-[#7f47b3] transition outline-none focus:border-[#7f47b3] focus:ring-2"
+												class="h-10 w-full rounded-lg border border-[#55637b] bg-[#2c3644] px-3 text-sm text-[#ecf1fb] ring-[#6d7d99] transition-colors outline-none focus:border-[#7f90b0] focus:ring-2"
 												title={familyAssetLabel(selectedAsset)}
 											>
 												{#each getAvailableResolutionModes(group) as mode (mode)}
@@ -437,7 +441,7 @@
 										<a
 											href={asset(selectedAsset.path)}
 											download={selectedAsset.filename}
-											class="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-[#7f47b3] px-5 text-sm font-medium text-zinc-100 transition hover:bg-[#9660ca] focus-visible:ring-2 focus-visible:ring-[#b287dd] focus-visible:ring-offset-2 focus-visible:ring-offset-[#292929] focus-visible:outline-none"
+											class="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-[#414b5d] px-5 text-sm font-medium text-[#f3f7ff] transition-colors hover:bg-[#4e5a70] focus-visible:ring-2 focus-visible:ring-[#93a5c6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#323c4a] focus-visible:outline-none"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -451,7 +455,7 @@
 										</a>
 									</div>
 
-									<div class="space-y-1 text-xs text-zinc-400">
+									<div class="space-y-1 text-xs text-[#98a9c3]">
 										<!-- <p class="truncate" title={selectedAsset.filename}>{selectedAsset.filename}</p> -->
 										<p>
 											{selectedAsset.resolution.width} px × {selectedAsset.resolution.height} px
@@ -470,6 +474,7 @@
 
 <style lang="postcss">
 	:global(body) {
-		background-color: #1e1e1e;
+		background: #414b5d;
+		color: #e4e9f2;
 	}
 </style>
