@@ -293,7 +293,7 @@
 			<p class="max-w-3xl text-sm text-zinc-400 sm:text-base">
 				Developers and teams can download them for custom editors and engineering notebooks,
 				avoiding manual game-manual screenshots. Renders use fixed top-down camera extents for
-				consistency: 3690mm for V5 and 1920mm for IQ.
+				consistency: 3690 mm for V5 and 1920 mm for IQ.
 			</p>
 		</header>
 
