@@ -244,6 +244,24 @@
 		return highAsset ?? lowAsset;
 	};
 
+	const getPreviewAssetForGroup = (group: RenderingGroup) => {
+		const selectedFamily = getSelectedFamily(group);
+		const familyAssets = getFamilyAssetsForSelected(group);
+		return (
+			familyAssets.find((versionAsset) => versionAsset.version === selectedFamily) ??
+			getLowAsset(group) ??
+			getHighAsset(group)
+		);
+	};
+
+	const getPreviewPathForGroup = (group: RenderingGroup) => {
+		const baseAsset = getPreviewAssetForGroup(group);
+		if (!baseAsset) return '';
+		const extIndex = baseAsset.path.lastIndexOf('.');
+		if (extIndex === -1) return baseAsset.path;
+		return `${baseAsset.path.slice(0, extIndex)}+500px${baseAsset.path.slice(extIndex)}`;
+	};
+
 	const familyAssetLabel = (asset?: RenderingAsset) => {
 		if (!asset) return 'N/A';
 		return asset.resolution.width >= 3000
@@ -344,12 +362,13 @@
 					<section class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
 						{#each filteredGroups as group (group.key)}
 							{@const selectedAsset = selectedAssetForGroup(group)}
+							{@const previewPath = getPreviewPathForGroup(group) || selectedAsset.path}
 							<article
 								class="overflow-hidden rounded-2xl border border-[#353535] bg-[#292929] shadow-xl shadow-black/40"
 							>
 								<div class="aspect-square border-b border-[#3f2f54] bg-[#1e1e1e]">
 									<img
-										src={selectedAsset.path}
+										src={asset(previewPath)}
 										alt={selectedAsset.filename}
 										loading="lazy"
 										class="h-full w-full object-contain p-2"

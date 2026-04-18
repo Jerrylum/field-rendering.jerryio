@@ -1,0 +1,12 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": true,
+		"lib": ["ES2023", "DOM"],
+		"types": ["node"],
+		"noUnusedLocals": true,
+		"noUnusedParameters": true
+	},
+	"include": ["scripts/**/*.ts"],
+	"exclude": ["src/**", ".svelte-kit/**", "node_modules/**"]
+}

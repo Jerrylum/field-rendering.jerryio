@@ -8,13 +8,15 @@
 		"build": "wrangler types --check && vite build",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare --port 4173",
 		"prepare": "svelte-kit sync || echo ''",
-		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && bun run check:scripts",
+		"check:scripts": "tsc --project ./tsconfig.scripts.json --noEmit",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:unit": "vitest",
 		"test": "bun run test:unit -- --run",
-		"gen": "wrangler types"
+		"gen": "wrangler types",
+		"renders:pipeline": "bun run scripts/renders-pipeline.ts"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",
@@ -24,6 +26,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@tailwindcss/vite": "^4.2.2",
 		"@types/node": "^24",
+		"bun-types": "^1.3.12",
 		"eslint": "^10.2.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.17.0",
