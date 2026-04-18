@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process';
-import { mkdir, readdir, rename, stat, unlink, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, stat, writeFile } from 'node:fs/promises';
 import { extname, join } from 'node:path';
 
 type ParsedName = {
@@ -166,33 +166,6 @@ const main = async () => {
 	let allFiles = sortStrings((await readdir(rendersDir)).filter(isImageFile));
 	const fileSet = new Set<string>(allFiles);
 
-	let renamedCount = 0;
-	for (const filename of allFiles) {
-		const parsed = parseFilename(filename);
-		if (!parsed) continue;
-		if (parsed.season !== 'HighStakes') continue;
-		if (!parsed.version.startsWith('0.1')) continue;
-
-		const nextVersion = parsed.version.replace(/^0\.1/, '4.0');
-		const targetFilename = swapVersion(filename, nextVersion);
-		if (targetFilename === filename) continue;
-
-		const sourcePath = join(rendersDir, filename);
-		const targetPath = join(rendersDir, targetFilename);
-
-		if (fileSet.has(targetFilename)) {
-			await unlink(sourcePath);
-			fileSet.delete(filename);
-		} else {
-			await rename(sourcePath, targetPath);
-			fileSet.delete(filename);
-			fileSet.add(targetFilename);
-		}
-		renamedCount += 1;
-	}
-
-	allFiles = sortStrings([...fileSet]);
-
 	let generated2000Count = 0;
 	for (const filename of allFiles) {
 		const parsed = parseFilename(filename);
@@ -260,7 +233,6 @@ const main = async () => {
 
 	console.log(
 		[
-			`Renamed HighStakes 0.1 files: ${renamedCount}`,
 			`Generated +2000px files: ${generated2000Count}`,
 			`Generated +500px preview files: ${generated500Count}`,
 			`Metadata entries written: ${assets.length}`
