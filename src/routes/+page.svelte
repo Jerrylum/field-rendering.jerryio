@@ -284,6 +284,7 @@
 		aria-hidden="true"
 		class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,#414b5d_0%,#323c4a_50%,#28323f_100%)]"
 	></div>
+	<div aria-hidden="true" class="engineering-grid-bg pointer-events-none fixed inset-0 -z-10"></div>
 	<div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
 		<header class="space-y-2">
 			<p class="text-sm tracking-[0.18em] text-[#aebbd3] uppercase">field-rendering.jerryio</p>
@@ -476,5 +477,22 @@
 	:global(body) {
 		background: #414b5d;
 		color: #e4e9f2;
+	}
+
+	.engineering-grid-bg {
+		opacity: 0.7;
+		background-image:
+			linear-gradient(to right, rgb(152 190 216 / 0.045) 1px, transparent 1px),
+			linear-gradient(to bottom, rgb(152 190 216 / 0.045) 1px, transparent 1px),
+			linear-gradient(to right, rgb(170 212 232 / 0.09) 1px, transparent 1px),
+			linear-gradient(to bottom, rgb(170 212 232 / 0.09) 1px, transparent 1px),
+			radial-gradient(circle at center, rgb(15 20 28 / 0) 56%, rgb(15 20 28 / 0.18) 100%);
+		background-size:
+			24px 24px,
+			24px 24px,
+			96px 96px,
+			96px 96px,
+			100% 100%;
+		background-position: 0 0;
 	}
 </style>
