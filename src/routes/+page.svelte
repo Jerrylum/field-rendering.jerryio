@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
-	import { renderings, type RenderingAsset } from '$lib/generated/renderings';
+	import { renderings, type RenderingAsset } from '$lib/renderings';
 
 	type RenderingGroup = {
 		key: string;
@@ -13,6 +13,7 @@
 	};
 
 	type ProgramGroup = 'VEX V5' | 'VEX IQ';
+	type ResolutionMode = 'high' | 'low';
 
 	const programGroups: ProgramGroup[] = ['VEX V5', 'VEX IQ'];
 	const setupLabels: Record<string, string> = {
@@ -53,6 +54,7 @@
 		const [program, season] = key.split('|');
 		return { program: program as ProgramGroup, season: season ?? '' };
 	};
+	const getVersionFamily = (version: string) => version.split('+')[0] ?? version;
 
 	const formatBytes = (bytes: number) => {
 		if (!Number.isFinite(bytes) || bytes < 0) return 'Unknown size';
@@ -66,6 +68,7 @@
 	};
 
 	let selectedVersionOverrides = $state<Record<string, string>>({});
+	let selectedResolutionModeByGroup = $state<Record<string, ResolutionMode>>({});
 	let selectedSeasonTreeKey = $state('');
 
 	let seasonYearBySeason = $derived.by(() => {
@@ -153,11 +156,64 @@
 
 	let activeSelection = $derived(parseSeasonTreeKey(activeSeasonTreeKey));
 
+	const getVersionFamilies = (group: RenderingGroup) => {
+		const seen: Record<string, true> = {};
+		const families: string[] = [];
+		for (const versionAsset of group.versions) {
+			const family = getVersionFamily(versionAsset.version);
+			if (seen[family]) continue;
+			seen[family] = true;
+			families.push(family);
+		}
+		return families;
+	};
+
+	const getFamilyAssets = (group: RenderingGroup, family: string) =>
+		group.versions
+			.filter((versionAsset) => getVersionFamily(versionAsset.version) === family)
+			.toSorted((a, b) => a.resolution.width - b.resolution.width);
+
+	const getSelectedFamily = (group: RenderingGroup) => {
+		const families = getVersionFamilies(group);
+		const preferredFamily = selectedVersionOverrides[group.key];
+		return preferredFamily && families.includes(preferredFamily)
+			? preferredFamily
+			: (families[0] ?? '');
+	};
+
+	const getFamilyAssetsForSelected = (group: RenderingGroup) =>
+		getFamilyAssets(group, getSelectedFamily(group));
+
+	const getLowAsset = (group: RenderingGroup) => getFamilyAssetsForSelected(group)[0];
+	const getHighAsset = (group: RenderingGroup) => {
+		const assets = getFamilyAssetsForSelected(group);
+		return assets[assets.length - 1];
+	};
+
 	const selectedAssetForGroup = (group: RenderingGroup) => {
-		const selectedVersion = selectedVersionOverrides[group.key] ?? group.versions[0]?.version;
-		return (
-			group.versions.find((version) => version.version === selectedVersion) ?? group.versions[0]
-		);
+		const lowAsset = getLowAsset(group);
+		const highAsset = getHighAsset(group);
+		const selectedResolutionMode = selectedResolutionModeByGroup[group.key] ?? 'high';
+
+		if (selectedResolutionMode === 'low') return lowAsset ?? highAsset;
+		return highAsset ?? lowAsset;
+	};
+
+	const resolutionModeButtonClass = (active: boolean) => [
+		'rounded-lg border px-2 py-2 text-xs font-medium transition',
+		active
+			? 'border-[#7f47b3] bg-[#3b2b4e] text-white'
+			: 'border-[#353535] bg-[#1e1e1e] text-zinc-300 hover:bg-[#353535]'
+	];
+
+	const isSameAsset = (a?: RenderingAsset, b?: RenderingAsset) =>
+		Boolean(a && b && a.path === b.path);
+
+	const familyAssetLabel = (asset?: RenderingAsset) => {
+		if (!asset) return 'N/A';
+		return asset.resolution.width >= 3000
+			? `High (${asset.resolution.width}×${asset.resolution.height})`
+			: `Low (${asset.resolution.width}×${asset.resolution.height})`;
 	};
 
 	let filteredGroups = $derived.by(() => {
@@ -268,7 +324,7 @@
 										src={selectedAsset.path}
 										alt={selectedAsset.filename}
 										loading="lazy"
-										class="h-full w-full object-cover"
+										class="h-full w-full object-contain p-2"
 									/>
 								</div>
 
@@ -282,7 +338,7 @@
 												<dt class="text-zinc-500">View</dt>
 												<dd>{getViewLabel(group.view)}</dd>
 											</div>
-											<div class="">
+											<div>
 												<dt class="text-zinc-500">Theme</dt>
 												<dd>{group.theme}</dd>
 											</div>
@@ -296,7 +352,7 @@
 												>Version</span
 											>
 											<select
-												value={selectedAsset.version}
+												value={getSelectedFamily(group)}
 												onchange={(event) => {
 													selectedVersionOverrides[group.key] = (
 														event.currentTarget as HTMLSelectElement
@@ -304,18 +360,52 @@
 												}}
 												class="w-full rounded-lg border border-[#353535] bg-[#1e1e1e] px-3 py-2 text-sm text-zinc-100 ring-[#7f47b3] transition outline-none focus:border-[#7f47b3] focus:ring-2"
 											>
-												{#each group.versions as versionAsset (versionAsset.version)}
-													<option value={versionAsset.version}>{versionAsset.version}</option>
+												{#each getVersionFamilies(group) as versionFamily (versionFamily)}
+													<option value={versionFamily}>{versionFamily}</option>
 												{/each}
 											</select>
 										</label>
 
+										<div class="grid grid-cols-2 gap-1">
+											<button
+												type="button"
+												class={resolutionModeButtonClass(
+													(selectedResolutionModeByGroup[group.key] ?? 'high') === 'low'
+												)}
+												onclick={() => {
+													selectedResolutionModeByGroup[group.key] = 'low';
+												}}
+												disabled={!getLowAsset(group)}
+												title={familyAssetLabel(getLowAsset(group))}
+											>
+												Low
+											</button>
+											<button
+												type="button"
+												class={resolutionModeButtonClass(
+													(selectedResolutionModeByGroup[group.key] ?? 'high') === 'high'
+												)}
+												onclick={() => {
+													selectedResolutionModeByGroup[group.key] = 'high';
+												}}
+												disabled={!getHighAsset(group) ||
+													isSameAsset(getHighAsset(group), getLowAsset(group))}
+												title={familyAssetLabel(getHighAsset(group))}
+											>
+												High
+											</button>
+										</div>
+
 										<a
 											href={asset(selectedAsset.path)}
 											download={selectedAsset.filename}
-											class="inline-flex h-10 items-center justify-center rounded-lg bg-[#7f47b3] px-4 text-sm font-medium text-zinc-100 transition hover:bg-[#9660ca] focus-visible:ring-2 focus-visible:ring-[#b287dd] focus-visible:ring-offset-2 focus-visible:ring-offset-[#292929] focus-visible:outline-none"
+											class="inline-flex h-10 items-center justify-center rounded-lg bg-[#7f47b3] px-5 text-sm font-medium text-zinc-100 transition hover:bg-[#9660ca] focus-visible:ring-2 focus-visible:ring-[#b287dd] focus-visible:ring-offset-2 focus-visible:ring-offset-[#292929] focus-visible:outline-none"
 										>
-											Download
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5" fill="currentColor"
+												><!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path
+													d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"
+												/></svg
+											>
 										</a>
 									</div>
 
