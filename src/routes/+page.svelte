@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
 	import { renderings, type RenderingAsset } from '$lib/renderings';
+	import FullVolumeSymbol from '$lib/assets/FullVolumeSymbol.svg';
+	import HighStakesSymbol from '$lib/assets/HighStakesSymbol.svg';
+	import IQFieldPerimeterSymbol from '$lib/assets/IQFieldPerimeter.svg';
+	import MixAndMatchSymbol from '$lib/assets/MixAndMatchSymbol.svg';
+	import OverUnderSymbol from '$lib/assets/OverUnderSymbol.svg';
+	import PushBackSymbol from '$lib/assets/PushBackSymbol.svg';
+	import RapidRelaySymbol from '$lib/assets/RapidRelaySymbol.svg';
+	import V5FieldPerimeterSymbol from '$lib/assets/V5FieldPerimeter.svg';
 
 	type RenderingGroup = {
 		key: string;
@@ -55,6 +63,21 @@
 		return { program: program as ProgramGroup, season: season ?? '' };
 	};
 	const getVersionFamily = (version: string) => version.split('+')[0] ?? version;
+	const normalizeSeasonKey = (season: string) => season.replace(/[^a-z0-9]/gi, '').toLowerCase();
+	const seasonIconBySeason: Record<string, string> = {
+		highstakes: HighStakesSymbol,
+		overunder: OverUnderSymbol,
+		pushback: PushBackSymbol,
+		fullvolume: FullVolumeSymbol,
+		mixandmatch: MixAndMatchSymbol,
+		rapidrelay: RapidRelaySymbol
+	};
+	const getSeasonIcon = (season: string, program: ProgramGroup) => {
+		if (normalizeSeasonKey(season) === 'fieldperimeter') {
+			return program === 'VEX IQ' ? IQFieldPerimeterSymbol : V5FieldPerimeterSymbol;
+		}
+		return seasonIconBySeason[normalizeSeasonKey(season)];
+	};
 
 	const formatBytes = (bytes: number) => {
 		if (!Number.isFinite(bytes) || bytes < 0) return 'Unknown size';
@@ -250,7 +273,7 @@
 				PATH.JERRYIO and other path editors, so waypoint placement maps to expected robot locations.
 			</p>
 			<p class="max-w-3xl text-sm text-zinc-400 sm:text-base">
-				Developers and teams can also download them for custom editors and engineering notebooks,
+				Developers and teams can download them for custom editors and engineering notebooks,
 				avoiding manual game-manual screenshots. Renders use fixed top-down camera extents for
 				consistency: 3690mm for V5 and 1920mm for IQ.
 			</p>
@@ -276,24 +299,17 @@
 										selectedSeasonTreeKey = treeKey;
 									}}
 									class={[
-										'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition',
+										'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition cursor-pointer',
 										treeKey === activeSeasonTreeKey
 											? 'bg-[#3b2b4e] text-white ring-1 ring-[#7f47b3]'
 											: 'text-zinc-300 hover:bg-[#353535]'
 									]}
 								>
-									<svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0" aria-hidden="true">
-										<rect
-											x="2.5"
-											y="2.5"
-											width="15"
-											height="15"
-											rx="2"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5"
-										/>
-									</svg>
+									<img
+										src={getSeasonIcon(season, program)}
+										alt={`${getSeasonLabel(season)} symbol`}
+										class="h-6 w-6 shrink-0 select-none"
+									/>
 									<span>{getSeasonLabel(season)}</span>
 								</button>
 							{/each}
@@ -378,7 +394,7 @@
 											</select>
 										</label>
 
-										<label class="w-38">
+										<label class="w-26">
 											<span
 												class="mb-1 block text-xs font-medium tracking-wide text-zinc-400 uppercase"
 												>Resolution</span
@@ -394,30 +410,35 @@
 												title={familyAssetLabel(selectedAsset)}
 											>
 												{#each getAvailableResolutionModes(group) as mode (mode)}
-													<option value={mode}>{mode === 'high' ? 'High Resolution' : 'Low Resolution'}</option>
+													<option value={mode}>{mode === 'high' ? 'High' : 'Low'}</option>
 												{/each}
 											</select>
 										</label>
+
+										<a
+											href={asset(selectedAsset.path)}
+											download={selectedAsset.filename}
+											class="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-[#7f47b3] px-5 text-sm font-medium text-zinc-100 transition hover:bg-[#9660ca] focus-visible:ring-2 focus-visible:ring-[#b287dd] focus-visible:ring-offset-2 focus-visible:ring-offset-[#292929] focus-visible:outline-none"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 640 640"
+												class="h-4 w-4"
+												fill="currentColor"
+												><!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path
+													d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"
+												/></svg
+											>
+										</a>
 									</div>
 
 									<div class="space-y-1 text-xs text-zinc-400">
-										<p class="truncate" title={selectedAsset.filename}>{selectedAsset.filename}</p>
-										<p>{selectedAsset.resolution.width} × {selectedAsset.resolution.height}</p>
+										<!-- <p class="truncate" title={selectedAsset.filename}>{selectedAsset.filename}</p> -->
+										<p>
+											{selectedAsset.resolution.width} px × {selectedAsset.resolution.height} px
+										</p>
 										<p>{formatBytes(selectedAsset.sizeBytes)}</p>
 									</div>
-
-									<a
-										href={asset(selectedAsset.path)}
-										download={selectedAsset.filename}
-										class="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-[#7f47b3] px-5 text-sm font-medium text-zinc-100 transition hover:bg-[#9660ca] focus-visible:ring-2 focus-visible:ring-[#b287dd] focus-visible:ring-offset-2 focus-visible:ring-offset-[#292929] focus-visible:outline-none"
-									>
-										<span>Download</span>
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-4 w-4" fill="currentColor"
-											><!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path
-												d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"
-											/></svg
-										>
-									</a>
 								</div>
 							</article>
 						{/each}
