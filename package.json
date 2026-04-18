@@ -7,6 +7,7 @@
 		"dev": "vite dev",
 		"build": "wrangler types --check && vite build",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare --port 4173",
+		"deploy": "wrangler pages deploy .svelte-kit/cloudflare",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && bun run check:scripts",
 		"check:scripts": "tsc --project ./tsconfig.scripts.json --noEmit",
