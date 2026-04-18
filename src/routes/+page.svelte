@@ -317,7 +317,7 @@
 										selectedSeasonTreeKey = treeKey;
 									}}
 									class={[
-										'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition cursor-pointer',
+										'flex w-full cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-left text-sm transition',
 										treeKey === activeSeasonTreeKey
 											? 'bg-[#3b2b4e] text-white ring-1 ring-[#7f47b3]'
 											: 'text-zinc-300 hover:bg-[#353535]'
@@ -467,3 +467,9 @@
 		</section>
 	</div>
 </main>
+
+<style lang="postcss">
+	:global(body) {
+		background-color: #1e1e1e;
+	}
+</style>
