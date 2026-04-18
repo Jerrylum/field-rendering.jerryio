@@ -1,42 +1,95 @@
-# sv
+# field-rendering.jerryio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A VEX field rendering gallery for teams and tool developers.
 
-## Creating a project
+## What this project is
 
-If you're seeing this, you've probably already done this step. Congrats!
+`field-rendering.jerryio` is a static gallery for browsing and downloading standardized VEX field renders by:
+
+- competition
+- season
+- setup
+- view
+- theme
+- version / resolution
+
+The UI is designed for fast discovery while preserving exact downloadable assets for route-planning tools, custom editors, and engineering notebooks.
+
+## Why this exists
+
+This project sits alongside:
+
+- `FieldCAD` (render generation workflow and camera consistency)
+- `PATH.JERRYIO` (path-planning/editor usage)
+
+The goal is to provide reusable field imagery with predictable framing and naming, instead of ad-hoc screenshots from manuals or CAD viewports.
+
+## Rendering standards
+
+Renders are prepared with a consistent top-down camera setup so field geometry aligns across assets:
+
+- VEX V5 extent baseline: `3690mm`
+- VEX IQ extent baseline: `1920mm`
+
+This consistency is important when assets are used as coordinate-aware backgrounds.
+
+## Asset versions and previews
+
+- Downloadable assets live in `static/renders`.
+- The gallery preview image uses a generated `+500px` variant for faster loading.
+- Preview variants are not included in downloadable metadata.
+- Additional `+2000px` derivatives are generated for lower-bandwidth usage where available.
+
+## Filename and metadata model
+
+Base naming pattern:
+
+`Competition-Season-Setup-View-Theme@SemVer.ext`
+
+Examples:
+
+- `V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0.png`
+- `V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+2000px.png`
+- `V5RC-HighStakes-H2H-TopDown-TileColor66_71@4.0+500px.png` (preview-only)
+
+`src/lib/renderings.ts` is generated metadata for downloadable assets (preview-only files are intentionally excluded).
+
+## Development
 
 ```sh
-# create a new project
-npx sv create my-app
+bun install
+bun run dev
 ```
 
-To recreate this project with the same configuration:
+## Build and deploy
 
 ```sh
-# recreate this project
-bun x sv@0.15.1 create --template minimal --types ts --add prettier eslint vitest="usages:unit" tailwindcss="plugins:none" sveltekit-adapter="adapter:cloudflare+cfTarget:pages" --install bun .
+bun run build
+bun run deploy
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Quality checks
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run check
 ```
 
-## Building
+This includes:
 
-To create a production version of your app:
+- Cloudflare worker type validation
+- Svelte type checks
+- TypeScript checks for scripts under `scripts/`
+
+## Render pipeline
+
+To generate derivative assets and refresh metadata:
 
 ```sh
-npm run build
+bun run renders:pipeline
 ```
 
-You can preview the production build with `npm run preview`.
+Pipeline behavior:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- generates missing `+2000px` derivatives
+- generates `+500px` preview derivatives
+- regenerates `src/lib/renderings.ts`
