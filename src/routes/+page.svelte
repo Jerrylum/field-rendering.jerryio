@@ -289,25 +289,15 @@
 		<header class="space-y-2">
 			<p class="text-sm tracking-[0.18em] text-[#aebbd3] uppercase">field-rendering.jerryio</p>
 			<h1 class="text-3xl font-semibold tracking-tight text-[#f3f6fb] sm:text-4xl">
-				Download Standardized VEX Field Rendering Images
+				Standardized VEX Field Rendering Images
 			</h1>
-			<p class="max-w-3xl text-sm text-[#c4cedf] sm:text-base">
-				Standardized top-down field images for engineering notebooks, path planning, and simulation.
-			</p>
+			<h2 class="max-w-3xl text-sm text-[#c4cedf] sm:text-base">
+				Highly accurate top-down views of the field, rendered with an orthographic camera and a
+				fixed extent. Perfect for engineering notebooks and precise route planning in tools like
+				PATH.JERRYIO, so waypoints map to expected coordinates in the physical field.
+			</h2>
 			<p class="max-w-3xl text-sm text-[#9faec3] sm:text-base">
-				They are pixel-perfect top-down views of the field, rendered with an orthographic camera and
-				a fixed extent. Perfect for precise route planning in tools like PATH.JERRYIO, so waypoint
-				maps to expected coordinates in the physical field.
-			</p>
-			<p class="max-w-3xl text-sm text-[#b7c5dc] sm:text-base">
-				Source code available on
-				<a
-					href="https://github.com/Jerrylum/field-rendering.jerryio"
-					target="_blank"
-					rel="noreferrer"
-					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
-					>GitHub</a
-				>. Join our
+				Rendered images and CAD files are distributed under CC BY 4.0 license. Join our
 				<a
 					href="https://discord.gg/4uVSVXXBBa"
 					target="_blank"
@@ -315,7 +305,14 @@
 					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
 					>Discord server</a
 				>
-				to download CAD files and get updates.
+				to download CAD files and get updates. Source code available on
+				<a
+					href="https://github.com/Jerrylum/field-rendering.jerryio"
+					target="_blank"
+					rel="noreferrer"
+					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
+					>GitHub</a
+				>.
 			</p>
 		</header>
 
