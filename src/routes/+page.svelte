@@ -289,16 +289,33 @@
 		<header class="space-y-2">
 			<p class="text-sm tracking-[0.18em] text-[#aebbd3] uppercase">field-rendering.jerryio</p>
 			<h1 class="text-3xl font-semibold tracking-tight text-[#f3f6fb] sm:text-4xl">
-				Field Rendering Gallery
+				Download Standardized VEX Field Rendering Images
 			</h1>
 			<p class="max-w-3xl text-sm text-[#c4cedf] sm:text-base">
-				These standardized field renders are made for precise route planning in tools like
-				PATH.JERRYIO and other path editors, so waypoint placement maps to expected robot locations.
+				Standardized top-down field images for engineering notebooks, path planning, and simulation.
 			</p>
 			<p class="max-w-3xl text-sm text-[#9faec3] sm:text-base">
-				Developers and teams can download them for custom editors and engineering notebooks,
-				avoiding manual game-manual screenshots. Renders use fixed top-down camera extents for
-				consistency: 3690 mm for V5 and 1920 mm for IQ.
+				They are pixel-perfect top-down views of the field, rendered with an orthographic camera and
+				a fixed extent. Perfect for precise route planning in tools like PATH.JERRYIO, so waypoint
+				maps to expected coordinates in the physical field.
+			</p>
+			<p class="max-w-3xl text-sm text-[#b7c5dc] sm:text-base">
+				Source code available on
+				<a
+					href="https://github.com/Jerrylum/field-rendering.jerryio"
+					target="_blank"
+					rel="noreferrer"
+					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
+					>GitHub</a
+				>. Join our
+				<a
+					href="https://discord.gg/4uVSVXXBBa"
+					target="_blank"
+					rel="noreferrer"
+					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
+					>Discord server</a
+				>
+				to download CAD files and get updates.
 			</p>
 		</header>
 

@@ -4,9 +4,9 @@
 	let { children } = $props();
 
 	const siteName = 'field-rendering.jerryio';
-	const siteTitle = 'VEX Field Rendering Gallery';
+	const siteTitle = 'Download Standardized VEX Field Rendering Images';
 	const siteDescription =
-		'Browse and download standardized VEX field rendering images for path planning, simulation, and engineering notebooks.';
+		'High-quality orthographic top-down field renders including skills and VEX U. CAD files available, built for engineering notebooks, path planning, and simulation.';
 	const siteUrl = 'https://field-rendering.jerryio.com';
 	const socialImageUrl = `${siteUrl}/social-banner.png`;
 </script>
