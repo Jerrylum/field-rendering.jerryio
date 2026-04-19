@@ -317,7 +317,7 @@
 			<p class="max-w-3xl text-sm text-[#9faec3] sm:text-base">
 				Rendered images and CAD files are distributed under CC BY 4.0 license. Join our
 				<a
-					href="https://discord.gg/4uVSVXXBBa"
+					href="https://discord.gg/vxtp293j8u"
 					target="_blank"
 					rel="noreferrer"
 					class="font-medium text-[#e4edff] underline decoration-[#8799b8] underline-offset-2 transition-colors hover:text-white"
