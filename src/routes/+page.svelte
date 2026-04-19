@@ -269,6 +269,24 @@
 			: `Low (${asset.resolution.width}×${asset.resolution.height})`;
 	};
 
+	const trackRenderDownloadClick = (
+		group: RenderingGroup,
+		selectedAsset: RenderingAsset,
+		selectedResolutionMode: ResolutionMode
+	) => {
+		window.gtag?.('event', 'render_download_click', {
+			render_id: selectedAsset.id,
+			competition: group.competition,
+			season: group.season,
+			setup: group.setup,
+			view: group.view,
+			theme: group.theme,
+			version: selectedAsset.version,
+			resolution_mode: selectedResolutionMode,
+			filename: selectedAsset.filename
+		});
+	};
+
 	let filteredGroups = $derived.by(() => {
 		if (!activeSelection.season) return [];
 		return groupedRenderings.filter(
@@ -381,6 +399,7 @@
 					<section class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
 						{#each filteredGroups as group (group.key)}
 							{@const selectedAsset = selectedAssetForGroup(group)}
+							{@const selectedResolutionMode = getSelectedResolutionMode(group)}
 							{@const previewPath = getPreviewPathForGroup(group) || selectedAsset.path}
 							<article
 								class="overflow-hidden rounded-2xl border border-[#4a556a] bg-[#323c4a] shadow-xl shadow-[#1f2630]/45"
@@ -456,6 +475,8 @@
 										<a
 											href={asset(selectedAsset.path)}
 											download={selectedAsset.filename}
+											onclick={() =>
+												trackRenderDownloadClick(group, selectedAsset, selectedResolutionMode)}
 											class="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-[#414b5d] px-5 text-sm font-medium text-[#f3f7ff] transition-colors hover:bg-[#4e5a70] focus-visible:ring-2 focus-visible:ring-[#93a5c6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#323c4a] focus-visible:outline-none"
 										>
 											<svg

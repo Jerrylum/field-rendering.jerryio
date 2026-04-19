@@ -1,6 +1,10 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
+	interface Window {
+		gtag?: (command: 'event', eventName: string, params?: Record<string, string | number>) => void;
+	}
+
 	namespace App {
 		interface Platform {
 			env: Env;
