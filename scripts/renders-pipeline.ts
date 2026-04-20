@@ -116,6 +116,13 @@ const runSipsResampleWidth = async (sourcePath: string, targetPath: string, widt
 	}
 };
 
+const runSipsResampleHeight = async (sourcePath: string, targetPath: string, height: number) => {
+	const result = await runCommand('sips', ['--resampleHeight', String(height), sourcePath, '--out', targetPath]);
+	if (result.exitCode !== 0) {
+		throw new Error(`sips failed for ${sourcePath}: ${result.stderr.trim()}`);
+	}
+};
+
 const getResolution = async (filePath: string) => {
 	const result = await runCommand('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', filePath]);
 	if (result.exitCode !== 0) {
@@ -175,7 +182,11 @@ const main = async () => {
 		const targetFilename = swapVersion(filename, `${parsed.version}+2000px`);
 		if (fileSet.has(targetFilename)) continue;
 
-		await runSipsResampleWidth(join(rendersDir, filename), join(rendersDir, targetFilename), 2000);
+		if (parsed.competition === 'VIQRC') {
+			await runSipsResampleHeight(join(rendersDir, filename), join(rendersDir, targetFilename), 1517);
+		} else {
+			await runSipsResampleWidth(join(rendersDir, filename), join(rendersDir, targetFilename), 2000);
+		}
 		fileSet.add(targetFilename);
 		generated2000Count += 1;
 	}
