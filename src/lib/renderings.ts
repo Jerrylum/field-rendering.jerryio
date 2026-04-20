@@ -598,6 +598,42 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
+    "id": "VIQRC-MixAndMatch-Skills-TopDown-Original@4.0",
+    "competition": "VIQRC",
+    "season": "MixAndMatch",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "4.0",
+    "extension": "png",
+    "filename": "VIQRC-MixAndMatch-Skills-TopDown-Original@4.0.png",
+    "path": "/renders/VIQRC-MixAndMatch-Skills-TopDown-Original@4.0.png",
+    "sizeBytes": 7716918,
+    "year": 2025,
+    "resolution": {
+      "width": 4000,
+      "height": 3033
+    }
+  },
+  {
+    "id": "VIQRC-MixAndMatch-Skills-TopDown-Original@4.0+2000px",
+    "competition": "VIQRC",
+    "season": "MixAndMatch",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "4.0+2000px",
+    "extension": "png",
+    "filename": "VIQRC-MixAndMatch-Skills-TopDown-Original@4.0+2000px.png",
+    "path": "/renders/VIQRC-MixAndMatch-Skills-TopDown-Original@4.0+2000px.png",
+    "sizeBytes": 3403456,
+    "year": 2025,
+    "resolution": {
+      "width": 2000,
+      "height": 1517
+    }
+  },
+  {
     "id": "VIQRC-RapidRelay-All-TopDown-Original@4.0",
     "competition": "VIQRC",
     "season": "RapidRelay",
