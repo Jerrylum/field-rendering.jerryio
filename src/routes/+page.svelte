@@ -4,11 +4,12 @@
 	import FullVolumeSymbol from '$lib/assets/FullVolumeSymbol.svg';
 	import HighStakesSymbol from '$lib/assets/HighStakesSymbol.svg';
 	import IQFieldPerimeterSymbol from '$lib/assets/IQFieldPerimeter.svg';
+	import RapidRelaySymbol from '$lib/assets/RapidRelaySymbol.svg';
 	import MixAndMatchSymbol from '$lib/assets/MixAndMatchSymbol.svg';
+	import V5FieldPerimeterSymbol from '$lib/assets/V5FieldPerimeter.svg';
 	import OverUnderSymbol from '$lib/assets/OverUnderSymbol.svg';
 	import PushBackSymbol from '$lib/assets/PushBackSymbol.svg';
-	import RapidRelaySymbol from '$lib/assets/RapidRelaySymbol.svg';
-	import V5FieldPerimeterSymbol from '$lib/assets/V5FieldPerimeter.svg';
+	import OverrideSymbol from '$lib/assets/OverrideSymbol.svg';
 
 	type RenderingGroup = {
 		key: string;
@@ -68,6 +69,7 @@
 		highstakes: HighStakesSymbol,
 		overunder: OverUnderSymbol,
 		pushback: PushBackSymbol,
+		override: OverrideSymbol,
 		fullvolume: FullVolumeSymbol,
 		mixandmatch: MixAndMatchSymbol,
 		rapidrelay: RapidRelaySymbol

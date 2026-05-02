@@ -238,6 +238,150 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
+    "id": "V5RC-Override-H2H-TopDown-TileColor66_71@0.1",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "V5RC-Override-H2H-TopDown-TileColor66_71@0.1.png",
+    "path": "/renders/V5RC-Override-H2H-TopDown-TileColor66_71@0.1.png",
+    "sizeBytes": 4176090,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "V5RC-Override-H2H-TopDown-TileColor66_71@0.1+2000px",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "V5RC-Override-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-Override-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1812518,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1.png",
+    "path": "/renders/V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1.png",
+    "sizeBytes": 4417076,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1944335,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "V5RC-Override-Skills-TopDown-TileColor66_71@0.1",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "V5RC-Override-Skills-TopDown-TileColor66_71@0.1.png",
+    "path": "/renders/V5RC-Override-Skills-TopDown-TileColor66_71@0.1.png",
+    "sizeBytes": 4113323,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "V5RC-Override-Skills-TopDown-TileColor66_71@0.1+2000px",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "V5RC-Override-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-Override-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1782311,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1.png",
+    "path": "/renders/V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1.png",
+    "sizeBytes": 4361112,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "V5RC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/V5RC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1922988,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
     "id": "V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0",
     "competition": "V5RC",
     "season": "OverUnder",
@@ -808,6 +952,150 @@ export const renderings: RenderingAsset[] = [
     "path": "/renders/VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png",
     "sizeBytes": 1546875,
     "year": 2024,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "VURC-Override-H2H-TopDown-TileColor66_71@0.1",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VURC-Override-H2H-TopDown-TileColor66_71@0.1.png",
+    "path": "/renders/VURC-Override-H2H-TopDown-TileColor66_71@0.1.png",
+    "sizeBytes": 4119478,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "VURC-Override-H2H-TopDown-TileColor66_71@0.1+2000px",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VURC-Override-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-Override-H2H-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1785291,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1.png",
+    "path": "/renders/VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1.png",
+    "sizeBytes": 4364518,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "H2H",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-Override-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1924835,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "VURC-Override-Skills-TopDown-TileColor66_71@0.1",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VURC-Override-Skills-TopDown-TileColor66_71@0.1.png",
+    "path": "/renders/VURC-Override-Skills-TopDown-TileColor66_71@0.1.png",
+    "sizeBytes": 4113271,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "VURC-Override-Skills-TopDown-TileColor66_71@0.1+2000px",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VURC-Override-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-Override-Skills-TopDown-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1782236,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 2000
+    }
+  },
+  {
+    "id": "VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1.png",
+    "path": "/renders/VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1.png",
+    "sizeBytes": 4361675,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 4000
+    }
+  },
+  {
+    "id": "VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px",
+    "competition": "VURC",
+    "season": "Override",
+    "setup": "Skills",
+    "view": "TopDownHighlighted",
+    "theme": "TileColor66_71",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "path": "/renders/VURC-Override-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
+    "sizeBytes": 1923015,
+    "year": 2026,
     "resolution": {
       "width": 2000,
       "height": 2000
