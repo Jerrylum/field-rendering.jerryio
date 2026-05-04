@@ -670,6 +670,78 @@ export const renderings: RenderingAsset[] = [
     }
   },
   {
+    "id": "VIQRC-LevelUp-H2H-TopDown-Original@0.1",
+    "competition": "VIQRC",
+    "season": "LevelUp",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VIQRC-LevelUp-H2H-TopDown-Original@0.1.png",
+    "path": "/renders/VIQRC-LevelUp-H2H-TopDown-Original@0.1.png",
+    "sizeBytes": 7495333,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 3033
+    }
+  },
+  {
+    "id": "VIQRC-LevelUp-H2H-TopDown-Original@0.1+2000px",
+    "competition": "VIQRC",
+    "season": "LevelUp",
+    "setup": "H2H",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VIQRC-LevelUp-H2H-TopDown-Original@0.1+2000px.png",
+    "path": "/renders/VIQRC-LevelUp-H2H-TopDown-Original@0.1+2000px.png",
+    "sizeBytes": 3292121,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 1517
+    }
+  },
+  {
+    "id": "VIQRC-LevelUp-Skills-TopDown-Original@0.1",
+    "competition": "VIQRC",
+    "season": "LevelUp",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "0.1",
+    "extension": "png",
+    "filename": "VIQRC-LevelUp-Skills-TopDown-Original@0.1.png",
+    "path": "/renders/VIQRC-LevelUp-Skills-TopDown-Original@0.1.png",
+    "sizeBytes": 7494271,
+    "year": 2026,
+    "resolution": {
+      "width": 4000,
+      "height": 3033
+    }
+  },
+  {
+    "id": "VIQRC-LevelUp-Skills-TopDown-Original@0.1+2000px",
+    "competition": "VIQRC",
+    "season": "LevelUp",
+    "setup": "Skills",
+    "view": "TopDown",
+    "theme": "Original",
+    "version": "0.1+2000px",
+    "extension": "png",
+    "filename": "VIQRC-LevelUp-Skills-TopDown-Original@0.1+2000px.png",
+    "path": "/renders/VIQRC-LevelUp-Skills-TopDown-Original@0.1+2000px.png",
+    "sizeBytes": 3290982,
+    "year": 2026,
+    "resolution": {
+      "width": 2000,
+      "height": 1517
+    }
+  },
+  {
     "id": "VIQRC-MixAndMatch-H2H-TopDown-Original@0.1",
     "competition": "VIQRC",
     "season": "MixAndMatch",

@@ -44,7 +44,8 @@ const seasonYearBySeason: Record<string, number> = {
 	RapidRelay: 2024,
 	PushBack: 2025,
 	MixAndMatch: 2025,
-	Override: 2026
+	Override: 2026,
+	LevelUp: 2026
 };
 
 const isImageFile = (name: string) => ['.png', '.jpg', '.jpeg', '.webp'].includes(extname(name).toLowerCase());

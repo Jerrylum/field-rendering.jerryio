@@ -6,6 +6,7 @@
 	import IQFieldPerimeterSymbol from '$lib/assets/IQFieldPerimeter.svg';
 	import RapidRelaySymbol from '$lib/assets/RapidRelaySymbol.svg';
 	import MixAndMatchSymbol from '$lib/assets/MixAndMatchSymbol.svg';
+	import LevelUpSymbol from '$lib/assets/LevelUpSymbol.svg';
 	import V5FieldPerimeterSymbol from '$lib/assets/V5FieldPerimeter.svg';
 	import OverUnderSymbol from '$lib/assets/OverUnderSymbol.svg';
 	import PushBackSymbol from '$lib/assets/PushBackSymbol.svg';
@@ -72,7 +73,8 @@
 		override: OverrideSymbol,
 		fullvolume: FullVolumeSymbol,
 		mixandmatch: MixAndMatchSymbol,
-		rapidrelay: RapidRelaySymbol
+		rapidrelay: RapidRelaySymbol,
+		levelup: LevelUpSymbol
 	};
 	const getSeasonIcon = (season: string, program: ProgramGroup) => {
 		if (normalizeSeasonKey(season) === 'fieldperimeter') {
