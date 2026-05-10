@@ -8,7 +8,7 @@
 	const siteDescription =
 		'High-quality orthographic top-down field renders including skills and VEX U. CAD files available, built for engineering notebooks, path planning, and simulation.';
 	const siteUrl = 'https://field-rendering.jerryio.com';
-	const socialImageUrl = `${siteUrl}/social-banner.png`;
+	const socialImageUrl = `${siteUrl}/social-banner-2627.png`;
 </script>
 
 <svelte:head>
